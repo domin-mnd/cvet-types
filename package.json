@@ -1,9 +1,9 @@
 {
   "name": "@cvet/types",
-  "version": "2.2.4",
+  "version": "2.2.",
   "description": "Type package for colors in your projects",
   "main": "dist/cjs/index.js",
-  "module": "dist/esm/index.mjs",
+  "module": "dist/esm/index.js",
   "types": "dist/types/index.d.ts",
   "scripts": {
     "compile": "tsc -b ./tsconfig.cjs.json ./tsconfig.esm.json ./tsconfig.types.json",
