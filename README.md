@@ -39,8 +39,10 @@ const mySafeHEX: SafeHEX = "#FF0000"; // Is a verbose equivalent to HEX type
 const myUnsafeHEX: UnsafeHEX = "#BADHEX"; // Accepts any string
 
 const amazingRGB: RGB = { r: 255, g: 0, b: 0 };
-const notSoAmazingRGB: RGB = { r: 256, g: 0, b: 0 };
-// Error, only 0-255
+const notSoAmazingRGB: RGB = { r: 256, g: 0, b: 0 }; // Error, only 0-255
+const safeRGB: SafeRGB = { r: 255, g: 0, b: 0 }; // Is a verbose equivalent to RGB type
+const weirdRGB: UnsafeRGB = { r: 299, g: 989, b: 0 }; // Accepts any numbers
+
 
 const myCMYK: CMYK = { c: 0, m: 100, y: 100, k: 0 };
 const myWeirdCMYK: CMYK = { c: 0, m: 1, y: 1, k: 0 };
