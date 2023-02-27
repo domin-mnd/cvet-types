@@ -1,14 +1,16 @@
 {
+  "files": ["./src/index.d.ts"],
   "compilerOptions": {
-    "target": "es2016",
-    "sourceMap": true,
-    "outDir": "./dist",
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "strict": true,
-    "skipLibCheck": true
-  },
-  "exclude": [
-    "tests"
-  ]
+    "module": "commonjs",
+    "target": "esnext",
+    "lib": ["es6", "dom"],
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "typeRoots": ["./src"],
+    "types": [],
+    "noEmit": true,
+    "forceConsistentCasingInFileNames": true
+  }
 }

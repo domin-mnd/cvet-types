@@ -21,7 +21,7 @@ export interface RGB {
   g: Hexadecimal;
   /** Blue color value, 0-255 */
   b: Hexadecimal;
-};
+}
 
 /** An object with r, g, b keys representing RGB color */
 export type SafeRGB = RGB;
@@ -34,7 +34,7 @@ export interface UnsafeRGB {
   g: number;
   /** Blue color value, any number */
   b: number;
-};
+}
 
 /** An object with h, s, l keys representing HSL color */
 export interface HSL {
@@ -44,7 +44,7 @@ export interface HSL {
   s: number;
   /** Lightness color value */
   l: number;
-};
+}
 
 /** An object with c, m, y, k keys representing CMYK color */
 export interface CMYK {
@@ -56,4 +56,4 @@ export interface CMYK {
   y: number;
   /** Black color value */
   k: number;
-};
+}

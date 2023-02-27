@@ -2,14 +2,7 @@
   "name": "@cvet/types",
   "version": "2.2.7",
   "description": "Type package for colors in your projects",
-  "main": "dist/cjs/index.js",
-  "module": "dist/esm/index.js",
-  "types": "dist/types/index.d.ts",
-  "scripts": {
-    "compile": "tsc -b ./tsconfig.cjs.json ./tsconfig.esm.json ./tsconfig.types.json",
-    "prettier:check": "prettier --check \"**/*.ts\"",
-    "prettier:write": "prettier --write \"**/*.ts\""
-  },
+  "types": "src/index",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Domin-MND/cvet-types.git"
@@ -26,8 +19,5 @@
   "bugs": {
     "url": "https://github.com/Domin-MND/cvet-types/issues"
   },
-  "homepage": "https://github.com/Domin-MND/cvet-types#readme",
-  "devDependencies": {
-    "prettier": "^2.8.4"
-  }
+  "homepage": "https://github.com/Domin-MND/cvet-types#readme"
 }
