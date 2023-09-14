@@ -5,7 +5,7 @@
   "types": "src/index",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Domin-MND/cvet-types.git"
+    "url": "git+https://github.com/domin-mnd/cvet-types.git"
   },
   "keywords": [
     "color",
@@ -17,7 +17,7 @@
   "author": "Domin-MND",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Domin-MND/cvet-types/issues"
+    "url": "https://github.com/domin-mnd/cvet-types/issues"
   },
-  "homepage": "https://github.com/Domin-MND/cvet-types#readme"
+  "homepage": "https://github.com/domin-mnd/cvet-types#readme"
 }
