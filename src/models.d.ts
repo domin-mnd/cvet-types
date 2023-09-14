@@ -1,19 +1,30 @@
 import type { Hexadecimal } from "./enumerates";
 
 /**
- * A safe type for a HEX color
+ * A safe type for a HEX color.
  * @see {@link https://stackoverflow.com/questions/68766792 There's no way to make a standalone HEX type}
  */
 export type HEX = `#${string}`; // #000000 ~ #FFFFFF
-/**
- * A safe type for a HEX color
- * @see {@link https://stackoverflow.com/questions/68766792 There's no way to make a standalone HEX type}
- */
-export type SafeHEX = HEX;
-/** An unsafe type for a HEX color */
-export type UnsafeHEX = HEX | string;
 
-/** An object with r, g, b keys representing RGB color */
+/**
+ * A HEX model namespace to manage safe & unsafe values.
+ *
+ * @example
+ * const okHex: HEX = "#ff00FF";
+ * const anotherOkHex: HEX.Safe = "#ff00FF";
+ * const dangerousHex: HEX.Unsafe = "WRONGHEX";
+ */
+export namespace HEX {
+  /**
+   * A safe type for a HEX color.
+   * @see {@link https://stackoverflow.com/questions/68766792 There's no way to make a standalone HEX type}
+   */
+  type Safe = HEX;
+  /** An unsafe type for a HEX color. */
+  type Unsafe = HEX | string;
+}
+
+/** An object with r, g, b keys representing RGB color. */
 export interface RGB {
   /** Red color value, 0-255 */
   r: Hexadecimal;
@@ -23,37 +34,58 @@ export interface RGB {
   b: Hexadecimal;
 }
 
-/** An object with r, g, b keys representing RGB color */
-export type SafeRGB = RGB;
-
-/** An unsafe object with r, g, b keys representing RGB color */
-export interface UnsafeRGB {
-  /** Red color value, any number */
-  r: number;
-  /** Green color value, any number */
-  g: number;
-  /** Blue color value, any number */
-  b: number;
+/**
+ * An RGB model namespace to manage safe & unsafe values of an object.
+ *
+ * @example
+ * const okRgb: RGB = {
+ *   r: 0,
+ *   g: 138,
+ *   b: 255,
+ * };
+ * const anotherOkRgb: RGB.Safe = {
+ *   r: 0,
+ *   g: 138,
+ *   b: 255,
+ * };
+ * const dangerousRgb: RGB.Unsafe = {
+ *   r: 97**9999,
+ *   g: -123,
+ *   b: 987,
+ * };
+ */
+export namespace RGB {
+  /** An object with r, g, b keys representing RGB color. */
+  type Safe = RGB;
+  /** An unsafe object with r, g, b keys representing RGB color. */
+  interface Unsafe {
+    /** Red color value, any number. */
+    r: number;
+    /** Green color value, any number. */
+    g: number;
+    /** Blue color value, any number. */
+    b: number;
+  }
 }
 
-/** An object with h, s, l keys representing HSL color */
+/** An object with h, s, l keys representing HSL color. */
 export interface HSL {
-  /** Hue color value */
+  /** Hue color value. */
   h: number;
-  /** Saturation color value */
+  /** Saturation color value. */
   s: number;
-  /** Lightness color value */
+  /** Lightness color value. */
   l: number;
 }
 
-/** An object with c, m, y, k keys representing CMYK color */
+/** An object with c, m, y, k keys representing CMYK color. */
 export interface CMYK {
-  /** Cyan color value */
+  /** Cyan color value. */
   c: number;
-  /** Magenta color value */
+  /** Magenta color value. */
   m: number;
-  /** Yellow color value */
+  /** Yellow color value. */
   y: number;
-  /** Black color value */
+  /** Black color value. */
   k: number;
 }
