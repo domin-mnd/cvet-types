@@ -26,11 +26,11 @@ export namespace HEX {
 
 /** An object with r, g, b keys representing RGB color. */
 export interface RGB {
-  /** Red color value, 0-255 */
+  /** Red color value, 0-255. */
   r: Hexadecimal;
-  /** Green color value, 0-255 */
+  /** Green color value, 0-255. */
   g: Hexadecimal;
-  /** Blue color value, 0-255 */
+  /** Blue color value, 0-255. */
   b: Hexadecimal;
 }
 

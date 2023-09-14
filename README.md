@@ -35,13 +35,13 @@ With these you can define colors like:
 
 ```ts
 const myHEX: HEX = "#FF0000";
-const mySafeHEX: SafeHEX = "#FF0000"; // Is a verbose equivalent to HEX type
-const myUnsafeHEX: UnsafeHEX = "#BADHEX"; // Accepts any string
+const mySafeHEX: HEX.Safe = "#FF0000"; // Is a verbose equivalent to HEX type
+const myUnsafeHEX: HEX.Unsafe = "#BADHEX"; // Accepts any string
 
 const amazingRGB: RGB = { r: 255, g: 0, b: 0 };
 const notSoAmazingRGB: RGB = { r: 256, g: 0, b: 0 }; // Error, only 0-255
-const safeRGB: SafeRGB = { r: 255, g: 0, b: 0 }; // Is a verbose equivalent to RGB type
-const weirdRGB: UnsafeRGB = { r: 299, g: 989, b: 0 }; // Accepts any numbers
+const safeRGB: RGB.Safe = { r: 255, g: 0, b: 0 }; // Is a verbose equivalent to RGB type
+const weirdRGB: RGB.Unsafe = { r: -299, g: 989, b: 0 }; // Accepts any numbers
 
 
 const myCMYK: CMYK = { c: 0, m: 100, y: 100, k: 0 };
@@ -57,9 +57,9 @@ const differentHSL: HSL = { h: 0.33, s: 1, l: 0.5 };
 ```
 
 Also there are enumerated units such as `Amount`, `Degrees`, `Hexadecimal`, `HexChar`:
-- `Amount` accepts numbers 0-100 
-- `Degrees` accepts numbers 0-360 
-- `Hexadecimal` accepts numbers 0-255 
+- `Amount` accepts numbers 0-100
+- `Degrees` accepts numbers 0-360
+- `Hexadecimal` accepts numbers 0-255
 - `HexChar` accepts 0-F string characters as presented in HEX color model
 
 > **Note**: `HexChar` isn't used in safe HEX type, see [this stackoverflow question](https://stackoverflow.com/questions/68766792) to know why.
