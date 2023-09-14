@@ -29,7 +29,7 @@ const color: HEX = "#FF0000";
 
 ## Types
 
-Package offers various types for most of the color models: `HEX`, `RGB`, `CMYK`, `HSL`.
+Package offers various types for most of the color models: `HEX`, `RGB`, `RGBA`, `CMYK`, `HSL` `HSLA`.
 
 With these you can define colors like:
 
