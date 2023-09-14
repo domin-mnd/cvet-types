@@ -1,6 +1,6 @@
 {
   "name": "@cvet/types",
-  "version": "2.2.8",
+  "version": "3.0.0",
   "description": "Type package for colors in your projects",
   "types": "src/index",
   "repository": {
